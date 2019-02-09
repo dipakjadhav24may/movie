@@ -1,0 +1,30 @@
+<div class="container">
+  <h1>Movie list</h1>
+
+  <table class="table table-hover" style="margin-bottom: 80px" cellspacing="0">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Year</th>
+        <th>Released</th>
+        <th>Director</th>
+        <th>imdbRating</th>
+        <th>Metascore</th>
+        <th>BoxOffice</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let movie of clients" (click)="open(movie)">
+        <td>{{movie.Title}}</td>
+        <td>{{movie.Year}}</td>
+        <td>{{movie.Released}}</td>
+        <td>{{movie.Director}}</td>
+        <td>{{movie.imdbRating}}</td>
+        <td>{{movie.Metascore}}</td>
+        <td>{{movie.BoxOffice}}</td>
+
+      </tr>
+    </tbody>
+  </table>
+</div>
